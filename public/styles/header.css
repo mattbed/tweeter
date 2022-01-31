@@ -1,0 +1,19 @@
+.avatar {
+  width: 200px;
+}
+
+header {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../images/argyle.png");
+  background-color:rgba(85, 167, 250, 0.25);
+}
+
+
+h2 {
+  margin: 2px;
+}
