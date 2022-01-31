@@ -14,7 +14,26 @@ html {
  * Global layout stuff
  */
 nav {
+  color: #FFFFFF;
+  background-color: #4056A1;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  padding: 2em 1.5em 1em 1.5em;
+}
+
+.logo {
   font-family: 'Bungee', cursive;
+  font-size: 40px;
+}
+
+.navElement {
+  flex-direction: column;
+  text-align: center;
+}
+
+.red {
+  color: red;
 }
 
 body {
