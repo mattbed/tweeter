@@ -9,11 +9,14 @@ header {
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
-  background-image: url("../images/argyle.png");
+  background-image: url("../images/always-grey.png");
   background-color:rgba(85, 167, 250, 0.25);
 }
 
-
 h2 {
   margin: 2px;
+}
+
+.light {
+  font-weight: 300;
 }
