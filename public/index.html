@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -32,9 +33,8 @@
     <nav>
       <span class="logo">tweeter</span>
       <span class="navElement"><strong>Write</strong> a new tweet<br /><i class="fa-solid fa-angles-down red"></i></span>
-      
     </nav>
-    <header>
+    <header class="mainHeader">
       <div>
           <img class = "avatar" src="/images/profile-hex.png"> 
       </div>
@@ -42,7 +42,7 @@
       <div>
           <h2>Matt <span class="light">Bed</span></h2>
       </div>
-    </header>
+    </header class="mainHeader">
   
     <!-- Page-specific (main) content here -->
     <main class="container">
@@ -57,7 +57,17 @@
           </div>
         </form>
       </section>
-      
+      <article>
+        <header>
+          <p><img src="https://i.imgur.com/73hZDYK.png" />Newton</p>
+          <p class="boldgrey">@SirIsaac</p>
+        </header>
+        <p class="tweetBody">If I have seen further it is by standing on the shoulders of giants</p>
+        <footer>
+          <p>10 days ago</p>
+          <span><i class="fas fa-flag"></i>&nbsp&nbsp<i class="fas fa-retweet"></i>&nbsp&nbsp<i class="fas fa-heart"></i></span>
+        </footer>       
+      </article>
     </main>
   </body>
 </html>
