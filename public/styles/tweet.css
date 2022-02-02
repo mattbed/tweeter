@@ -10,6 +10,7 @@ article {
   max-width: 600px;
   margin: auto;
   margin-top: 60px;
+  margin-bottom: 10px;
 }
 
 article:hover {
