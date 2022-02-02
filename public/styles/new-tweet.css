@@ -35,9 +35,8 @@ button {
   font-size: 18px;
 }
 
-.counter {
+#counter {
   font-family: 'Bungee', cursive;
-  color: rgb(75, 75, 75)
 }
 
 .submitLine {
