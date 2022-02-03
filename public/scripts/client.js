@@ -12,15 +12,32 @@ $(document).ready(function() {
     });
   };
   loadTweets();
+  
+  $('#tweetText').on('input', function() {
+    $('#error').slideUp(300);
+  });
 
   $("form").submit(function(event) {
     event.preventDefault();
+    // $('#error').css({
+    //   display: "none"
+    // });
     let tweetVal = event.target.tweetText.value;
     if (tweetVal.length === 0) {
-      alert("You are trying to tweet a blank message!");
+      $('#error p').text("You are trying to tweet a blank message!");
+      // $('#error').css({
+      //   display: "flex"
+      // });
+      $('#error').slideDown(300, function() {
+      });
       return;
     } else if (tweetVal.length > 140) {
-      alert("You are over the 140 character limit!");
+      $('#error p').text("You are over the 140 character limit!");
+      $('#error').slideDown(300, function() {
+        // $('#error').css({
+        //   display: "flex"
+        // });
+      });
       return;
     }
     const parameters = $("form").serialize();
