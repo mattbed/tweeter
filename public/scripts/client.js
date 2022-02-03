@@ -31,6 +31,18 @@ const initialTweets = [
 ]
 
 $(document).ready(function() {
+  $("form").submit(function(event) {
+    event.preventDefault();
+    // const data = event.target.tweetText.value;
+    const parameters = $("form").serialize();
+    // console.log(data);
+    // console.log(parameters);
+    $.post('/tweets', parameters)
+    // .then(() => {
+
+    // });
+    });
+
   const createTweetElement = function(input) {
   const time = timeago.format(input.created_at);
   const post = 
