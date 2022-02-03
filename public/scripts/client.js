@@ -42,8 +42,14 @@ $(document).ready(function() {
       //     }
       //   })
     });
-    });
-
+  });
+  
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+  
   const createTweetElement = function(input) {
   const time = timeago.format(input.created_at);
   const post = 
@@ -52,7 +58,7 @@ $(document).ready(function() {
         <p><img src="${input.user.avatars}" />${input.user.name}</p>
         <p class="bold opaque">${input.user.handle}</p>
       </header>
-      <p class="tweetBody">${input.content.text}</p>
+      <p class="tweetBody">${escape(input.content.text)}</p>
       <footer>
         <p>${time}</p>
         <span><i class="fas fa-flag"></i>&nbsp&nbsp<i class="fas fa-retweet"></i>&nbsp&nbsp<i class="fas fa-heart"></i></span>
