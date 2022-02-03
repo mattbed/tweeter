@@ -4,32 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// // temporary test code
-// const initialTweets = [
-//   {
-//   "user": {
-//     "name": "Newton",
-//     "avatars": "https://i.imgur.com/73hZDYK.png",
-//       "handle": "@SirIsaac"
-//     },
-//   "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//   "created_at": 1562116239227
-// },
-// {
-//   "user": {
-//     "name": "Descartes",
-//     "avatars": "https://i.imgur.com/nlhLi3I.png",
-//     "handle": "@rd"
-//   },
-//   "content": {
-//     "text": "Je pense , donc je suis"
-//   },
-//   "created_at": 1643743452707
-// }
-// ]
-
 $(document).ready(function() {
   const loadTweets = function() {
     $.ajax('/tweets', { method: 'GET' })
@@ -41,11 +15,33 @@ $(document).ready(function() {
 
   $("form").submit(function(event) {
     event.preventDefault();
+    let tweetVal = event.target.tweetText.value;
+    if (tweetVal.length === 0) {
+      alert("You are trying to tweet a blank message!");
+      return;
+    } else if (tweetVal.length > 140) {
+      alert("You are over the 140 character limit!");
+      return;
+    }
     const parameters = $("form").serialize();
     $.post('/tweets', parameters)
-    // .then(() => {
-
-    // });
+    .then(() => {
+      $('#tweetText').val("");
+      const counterEl = document.getElementById("counter");
+      $(counterEl).val(140);
+      $('#tweets').empty();
+      loadTweets();
+      // THERE HAS TO BE A BETTER WAY????
+      // $.ajax('/tweets', { method: 'GET' })
+      //   .then(function (parseTweets) {
+      //     for (let users of parseTweets) {
+      //       if (users.content.text === tweetVal) {
+      //         $tweet = createTweetElement(users);
+      //         $('#tweets-container').append($tweet);
+      //       }
+      //     }
+      //   })
+    });
     });
 
   const createTweetElement = function(input) {
@@ -69,8 +65,7 @@ $(document).ready(function() {
   const renderTweets = function(tweets) {
     for (let user of tweets) {
       const $tweet = createTweetElement(user);
-      $('#tweets-container').append($tweet);
+      $('#tweets').prepend($tweet);
     }
   }
-  // renderTweets(initialTweets);
 });
