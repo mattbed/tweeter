@@ -4,39 +4,44 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// temporary test code
-const initialTweets = [
-  {
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-  "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-  "created_at": 1562116239227
-},
-{
-  "user": {
-    "name": "Descartes",
-    "avatars": "https://i.imgur.com/nlhLi3I.png",
-    "handle": "@rd"
-  },
-  "content": {
-    "text": "Je pense , donc je suis"
-  },
-  "created_at": 1643743452707
-}
-]
+// // temporary test code
+// const initialTweets = [
+//   {
+//   "user": {
+//     "name": "Newton",
+//     "avatars": "https://i.imgur.com/73hZDYK.png",
+//       "handle": "@SirIsaac"
+//     },
+//   "content": {
+//       "text": "If I have seen further it is by standing on the shoulders of giants"
+//     },
+//   "created_at": 1562116239227
+// },
+// {
+//   "user": {
+//     "name": "Descartes",
+//     "avatars": "https://i.imgur.com/nlhLi3I.png",
+//     "handle": "@rd"
+//   },
+//   "content": {
+//     "text": "Je pense , donc je suis"
+//   },
+//   "created_at": 1643743452707
+// }
+// ]
 
 $(document).ready(function() {
+  const loadTweets = function() {
+    $.ajax('/tweets', { method: 'GET' })
+    .then(function (loadMoreTweets) {
+      renderTweets(loadMoreTweets);
+    });
+  };
+  loadTweets();
+
   $("form").submit(function(event) {
     event.preventDefault();
-    // const data = event.target.tweetText.value;
     const parameters = $("form").serialize();
-    // console.log(data);
-    // console.log(parameters);
     $.post('/tweets', parameters)
     // .then(() => {
 
@@ -58,8 +63,6 @@ $(document).ready(function() {
       </footer>
     </article>`
   return post;
-  // const counterEl = document.getElementById("counter");
-  // $(counterEl).text(140 - characterCount);
   }
 
   
@@ -69,5 +72,5 @@ $(document).ready(function() {
       $('#tweets-container').append($tweet);
     }
   }
-  renderTweets(initialTweets);
+  // renderTweets(initialTweets);
 });

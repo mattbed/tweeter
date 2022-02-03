@@ -1,10 +1,5 @@
 $(document).ready(function() {
-  const textArea = document.getElementById("tweet-text");
-
-  // textArea.addEventListener("input", () => {
-  //   console.log($(this));
-  //   console.log($( textArea ).val());
-  // });
+  const textArea = document.getElementById("tweetText");
   $(textArea).on('input', function() {
     const characterCount = $(this).val().length;
     console.log("charcount: ", characterCount);
