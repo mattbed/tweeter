@@ -2,17 +2,40 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+Build a simplified single-page Twitter clone using HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills. This is a front-end (client-side) project. Although we are required to review and understand the project's back-end (server-side) code, we are not required to make edits to it.
 
-## Getting Started
+## Scope
 
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
-3. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+This is a client-side Single Page APP (SPA) that communicates with a server via AJAX.
+Display requirements include:
+- Fixed navigation bar
+- Compose tweet box with:
+  - A text input
+  - A submit button
+  - Dynamic character counter
+- List of tweets with:
+  - An avatar + name + handle
+  - A tweet
+  - How long ago the tweet was posted
+  - Interactive flag/retweet/heart icons
+Functionality includes:
+- Dynamic character counter that turns red below 0 characters
+- Animated error messages upon submission of 0 character or >140 character tweets
+- Instantly updated tweet upon submission, sorted by newest
+- Animated tweet boxes and flag/retweet/heart icons
+- Responsive design - with a notable breakpoint for desktop monitors (1024px)
+
+## Screenshots
+
+!["Desktop (1024px and greater) formatted view of Tweeter."](https://github.com/mattbed/tweeter/blob/master/docs/Tweeter01.png?raw=true)
+!["Responsive design for smaller screens (less than 1024px), with mouse over a heart icon on a tweet"](https://github.com/mattbed/tweeter/blob/master/docs/Tweeter03.png?raw=true)
+!["Error message when submitting a tweet over 140 characters long."](https://github.com/mattbed/tweeter/blob/master/docs/Tweeter02.png?raw=true)
+
+
 
 ## Dependencies
 
 - Express
+- Body-Parser
+- Chance
 - Node 5.10.x or above
