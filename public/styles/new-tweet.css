@@ -33,18 +33,14 @@ button {
   padding: 4px 12px;
   background-color:#4056A1;
   color: white;
-  font-family: 'Bungee', cursive;
   font-size: 18px;
-}
-
-#counter {
-  font-family: 'Bungee', cursive;
 }
 
 .submitLine {
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
+  font-family: 'Bungee', cursive;
 }
 
 .error {

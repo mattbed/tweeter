@@ -14,7 +14,7 @@
     // docks error message once input is registered again
     $('#tweetText').on('input', errorDock);
     
-
+    // performs action upon submission of a new tweet
     $('form').submit(function(event) {
       event.preventDefault();
       // sort through and escape possible character length errors
@@ -97,8 +97,7 @@
     $.post('/tweets', parameters)
       .then(() => {
         $('#tweetText').val("");
-        const counterEl = document.getElementById('counter');
-        $(counterEl).val(140);
+        $('output').val(140);
         $('#tweets').empty();
         loadTweets();
       });
