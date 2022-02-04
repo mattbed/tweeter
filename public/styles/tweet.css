@@ -39,6 +39,7 @@ article p {
  margin: auto;
  margin-left: 0px;
  margin-right: 0px;
+ word-wrap: break-word;
 }
 
 footer p {

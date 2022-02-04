@@ -14,6 +14,7 @@
 
 #tweetText {
   width: 100%;
+  height: auto;
   resize: none;
   overflow: auto;
   border-top: none;
