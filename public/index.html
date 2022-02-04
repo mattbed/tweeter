@@ -33,7 +33,7 @@
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
+    <!-- Top nav bar -->
     <nav>
       <span class="logo">tweeter</span>
       <span class="navElement"><strong>Write</strong> a new tweet<br /><i class="fa-solid fa-angles-down red"></i></span>
@@ -49,6 +49,7 @@
     </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <!-- Compose tweet -->
       <section class="new-tweet">
         <form method="POST" action="/tweets/">
           <label for="tweetText" class="label">What are you humming about?</label>
@@ -58,11 +59,12 @@
             <output name="counter" for="tweet-text">140</output>
           </div>
         </form>
-        <!-- Error message -->
+        <!-- Error message (default: hidden) -->
         <div class="error">
           <span><i class="fas fa-exclamation-triangle"></i><p></p><i class="fas fa-exclamation-triangle"></i></span>
         </div>
       </section>
+      <!-- Tweets -->
       <section id="tweets">
       </section>
     </main>
