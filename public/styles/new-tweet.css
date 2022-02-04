@@ -47,7 +47,7 @@ button {
   justify-content: space-between;
 }
 
-#error {
+.error {
   display: none;
   border: 3px dashed red;
   background-color: rgba(255, 0, 0, 0.1);
@@ -58,12 +58,12 @@ button {
   text-align: center;
 }
 
-#error span {
+.error span {
   display: flex;
   justify-content: space-between;
 }
 
-#error i {
+.error i {
   color: red;
   margin: auto;
 }
