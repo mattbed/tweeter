@@ -28,8 +28,20 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- main {
-   flex-direction: column;
-   background-color: #f4f1ec;
-   width: 90%;
- }
+main {
+  flex-direction: column;
+  background-color: #f4f1ec;
+  width: 90%;
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  main {
+    margin-top: 150px;
+  }
+}

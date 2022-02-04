@@ -20,3 +20,13 @@ h2 {
 .light {
   font-weight: 300;
 }
+
+@media only screen and (min-width: 1024px) {
+  .mainHeader {
+  height: 340px;
+  justify-content: center;
+  width: 40%;
+  margin: 40px;
+  margin-top: 150px;
+  }
+}

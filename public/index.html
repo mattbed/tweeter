@@ -40,18 +40,16 @@
     </nav>
     <header class="mainHeader">
       <div>
-          <img class = "avatar" src="/images/profile-hex.png"> 
+          <img class="avatar" src="/images/profile-hex.png" /> 
       </div>
-      <br>
+      <br />
       <div>
           <h2>Matt <span class="light">Bed</span></h2>
       </div>
-    </header class="mainHeader">
-  
+    </header>
     <!-- Page-specific (main) content here -->
     <main class="container" id="tweets-container">
       <section class="new-tweet">
-        <!-- <h2>Compose Tweet</h2> -->
         <form method="POST" action="/tweets/">
           <label for="tweetText" class="label">What are you humming about?</label>
           <textarea name="text" id="tweetText"></textarea>
@@ -60,10 +58,10 @@
             <output name="counter" id="counter" for="tweet-text">140</output>
           </div>
         </form>
+        <!-- Error message -->
         <div id="error"><span><i class="fas fa-exclamation-triangle"></i><p></p><i class="fas fa-exclamation-triangle"></i></span></div>
       </section>
       <section id="tweets">
-
       </section>
     </main>
   </body>
