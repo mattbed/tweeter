@@ -27,8 +27,16 @@ Functionality includes:
 
 ## Screenshots
 
+### Desktop view
+Main view formatted for 1024px and greater resolution, with a tweet typed and ready to be submit
 !["Desktop (1024px and greater) formatted view of Tweeter."](https://github.com/mattbed/tweeter/blob/master/docs/Tweeter01.png?raw=true)
+
+### Alternate view
+Responsive designed view for screens less than 1024px resolution, with mouseover a heart icon shown
 !["Responsive design for smaller screens (less than 1024px), with mouse over a heart icon on a tweet"](https://github.com/mattbed/tweeter/blob/master/docs/Tweeter03.png?raw=true)
+
+### Error message
+Shown when submitting a tweet over 140 characters long
 !["Error message when submitting a tweet over 140 characters long."](https://github.com/mattbed/tweeter/blob/master/docs/Tweeter02.png?raw=true)
 
 
